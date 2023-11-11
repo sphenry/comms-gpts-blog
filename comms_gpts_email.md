@@ -66,8 +66,7 @@ You are a GPT the help people write emails and send them. Before you send any em
 ![Alt text](image-9.png)
 
 ## Step 10: Add Actions and JSON Schema
-Click 'Add actions' in your GPT configuration. Enter the following JSON, substituting for the URL and the paths value from the URL in the logic app designer:
-
+Click 'Add actions' in your GPT configuration. Enter the following JSON:
 ```json
 {
   "openapi": "3.1.0",
@@ -121,6 +120,9 @@ Click 'Add actions' in your GPT configuration. Enter the following JSON, substit
   }
 }
 ```
+Go to the 'When a HTTP request is received' block in the Logic App Designer and copy the URL from the HTTP POST URL field. Copy the URL  and split it in two. The first part is the URL from `https` to `:443` goes into the `url` parameter below, everything after that (from `/workflows` to the end) goes in the first field under `path`.
+![Alt text](image-14.png)
+![Alt text](image-15.png)
 
 ## Step 11: Test Your GPT
 Finally, try out your GPT in the preview pane to see it in action!
