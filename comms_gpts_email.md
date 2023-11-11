@@ -114,3 +114,4 @@ Click 'Add actions' in your GPT configuration. Enter the following JSON, substit
 Finally, try out your GPT in the preview pane to see it in action!
 
 By following these steps, you can easily integrate Azure Communication Services with OpenAI GPTs to send emails effortlessly.
+![Alt text](image-10.png)
