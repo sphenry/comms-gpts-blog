@@ -27,7 +27,7 @@ In the designer, click 'use sample payload', and add a JSON payload with "to", "
 {
   "to" : "test@example.com",
   "subject" : "subject" ,
-  "body" : "email body"
+  "content" : "email body"
 }
 ```
 ![Alt text](image-5.png)
@@ -37,11 +37,22 @@ Add a 'New step', search for "communication email" and add the 'send email' oper
 ![Alt text](image-6.png)
 
 ## Step 7: Set Email Parameters
-Set the 'from' field to the email address found on the 'Try email' page. Set 'To Email' to the 'to' field, 'Subject' to 'subject', and for 'body', select 'see more' and add 'content'.
+Set the 'from' field to the email address found on the 'Try email' page. Set 'To Email' to the 'to' field, 'Subject' to 'subject'
 ![Alt text](image-7.png)
 
+For the Body, click in the text area, then on the right, select 'see more' and add 'content'.
+![Alt text](image-12.png)
+
+
 ## Step 8: Test Your Setup
-Click save, then 'Run Trigger with Payload'. Test it with a JSON payload containing "to", "subject", and "body" fields.
+Click save, then 'Run Trigger with Payload'. Test it with a JSON payload containing "to", "subject", and "content" fields.
+```json
+{
+  "to" : "test@example.com",
+  "subject" : "subject" ,
+  "content" : "<p><b>email body</b></p>"
+}
+```
 ![Alt text](image-8.png)
 
 ## Step 9: Integrate with OpenAI GPTs
