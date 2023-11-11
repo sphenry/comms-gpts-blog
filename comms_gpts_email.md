@@ -1,11 +1,11 @@
 # Send Email from Your GPTs in 15 Mins with Azure Communication Services, and No Code!
 
-Sending emails through Azure Communication Services is surprisingly straightforward and requires no coding expertise. Here's how you can set it up in just 15 minutes.
+[ChatGPT 'GPTs'](https://openai.com/blog/introducing-gpts)  are amazing! You can create custom versions of ChatGPT that combine instructions, extra knowledge, and any combination of skills. Wouldn't it be great is you're new assistant could talk to the rest of the world? Sending emails through Azure Communication Services is surprisingly straightforward and requires no coding expertise. Here's how you can set it up in just 15 minutes.
 
 ## Step 1: Create an Azure Communication Service Resource
 First, you need to create an Azure Communication Service Resource. Follow the instructions on the [Create Azure Communication Services resource](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-azp) to get started.
 
-Copy the connection string from the Keys blade of your Communication resource. You'll need it later.
+Copy the `connection string` from the `Keys` blade of your Communication resource. You'll need it later.
 ![Alt text](image-1.png)
 ## Step 2: Create an Email Service
 Next, create an Email Service by following this [Create the Email Communications Service resource using portal](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/email/create-email-communication-resource).
@@ -14,7 +14,8 @@ Next, create an Email Service by following this [Create the Email Communications
 ## Step 3: Set Up a Free Azure Subdomain
 Back in the Communication resource, select 'Try Email'. Under 'Select a domain', choose 'Set up a free Azure subdomain' and select the email service you just created.
 ![Alt text](image-3.png)
-Use the 'Try email' feature to ensure that your setup is working correctly. Copy and save somewhere the 'Send email from' address. You'll need it later.
+Use the 'Try email' feature to ensure that your setup is working correctly. Copy and save somewhere the 'Send email from' address (it starts with `donotreply`). You'll need it later.
+![Alt text](image-11.png)
 
 ## Step 4: Create a Logic App Resource
 Now, search and create a new 'Logic App' resource in your Azure portal. In the Logic App designer, select 'When an HTTP request is received'.
@@ -24,9 +25,9 @@ Now, search and create a new 'Logic App' resource in your Azure portal. In the L
 In the designer, click 'use sample payload', and add a JSON payload with "to", "subject", and "content". Then click "done".
 ```json
 {
-"to" : "test@example.com",
-"subject" : "subject" ,
-"body" : "email body"
+  "to" : "test@example.com",
+  "subject" : "subject" ,
+  "body" : "email body"
 }
 ```
 ![Alt text](image-5.png)
