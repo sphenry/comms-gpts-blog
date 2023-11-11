@@ -124,6 +124,7 @@ Go to the 'When a HTTP request is received' block in the Logic App Designer and 
 ![Alt text](image-14.png)
 ![Alt text](image-15.png)
 
+Leave Authentication to none, and Privacy Policy blank
 ## Step 11: Test Your GPT
 Finally, try out your GPT in the preview pane to see it in action!
 
